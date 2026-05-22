@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: file-sharing-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free                  # change to "starter" etc. if needed
+    envVars:
+      - key: TG_BOT_TOKEN
+        sync: false             # fill in Render dashboard
+      - key: APP_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_NAME
+        value: filesharexbot
+      - key: PORT
+        value: "8080"
+      - key: TG_BOT_WORKERS
+        value: "4"
+      - key: PROTECT_CONTENT
+        value: "False"
+      - key: DISABLE_CHANNEL_BUTTON
+        value: "False"
+      - key: FORCE_SUB_CHANNEL
+        value: "0"
+      - key: AUTO_DELETE_TIME
+        value: "0"
+      - key: ADMINS
+        sync: false             # space-separated Telegram user IDs

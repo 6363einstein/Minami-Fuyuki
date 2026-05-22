@@ -1,0 +1,14 @@
+# Telegram
+pyrogram==2.0.106
+TgCrypto
+pyromod==1.5
+
+# Environment
+python-dotenv
+
+# Database
+pymongo
+dnspython
+
+# Web server
+aiohttp
